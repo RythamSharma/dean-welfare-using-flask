@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback List</title>
+</head>
+<body>
+  <h1>Feedback List</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Hostler/Day Scholar</th>
+      <th>Location Specific</th>
+      <th>Academic Block</th>
+      <th>Category</th>
+      <th>Feedback</th>
+    </tr>
+    {% for feedback in feedback_list %}
+    <tr>
+      <td>{{ feedback.id }}</td>
+      <td>{{ feedback.hostler_day_scholar }}</td>
+      <td>{{ feedback.location_specific }}</td>
+      <td>{{ feedback.academic_block }}</td>
+      <td>{{ feedback.category }}</td>
+      <td>{{ feedback.feedback }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

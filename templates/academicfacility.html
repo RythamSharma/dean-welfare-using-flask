@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Academic Facilities</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<div class="logo-container">
+			<img src="https://www.linkpicture.com/q/GLA_University_logo.png" alt="GLA University Logo">
+			<nav style="background-color: transparent;" >
+				<ul class="navo" >
+				  <li><a class="button" href="{{url_for('home')}}" style="font-size: larger;">Home</a></li> 
+				  <li><a class="button" href="{{url_for('aboutus')}}" style="font-size: larger;">About us</a></li>
+				  <li><a class="button" href="{{url_for('contactus')}}" style="font-size: larger;">Contact Us</a></li>
+				</ul>
+			  </nav>
+            <h1>Academic Facilities</h1>
+        </div>
+	</header>
+	<main>
+		<section>
+			<h2>Welcome to Our Academic Facilities</h2>
+			<p>Our campus is equipped with state-of-the-art facilities to ensure our students' comfort and convenience. From academic buildings to residence halls, everything is designed to create an ideal environment for learning and personal growth.</p>
+		</section>
+		<section>
+			<h2>Lecture Theaters</h2>
+			<p>GLA University has 223 classrooms which are built like amphitheatre, so that the teacher can give equal attention to all the students. 65 out of these are tutorial rooms. All these classrooms are Air-Conditioned. 
+                There are Latest computer systems attached with projector as well as on demand sound system, Wi-Fi and all modern, hi-tech amenities to facilitate incubates to have demonstrative mode of learning. 
+                The Internet facility is available on the computers in the University through 1Gbps bandwidth from BSNL under NKN and 155 Mbps from UP Communications Pvt Ltd. The classrooms are Air-conditioned with audio-visual and multi-media facility.</p>
+			<div class="gallery">
+				<img src="https://i.postimg.cc/MHH8vT56/lecture-1.jpg" alt="Residence Hall 1">
+				<img src="https://i.postimg.cc/4xDtPHH0/lecture-2.jpg" alt="Residence Hall 2">
+				<img src="https://i.postimg.cc/qvwqhtXn/lecture-3.jpg" alt="Residence Hall 3">
+			</div>
+		</section>
+		<section>
+			<h2>Library</h2>
+			<p>Our library is a peaceful haven for our students who need a quiet space to study or read. With an extensive collection of books and journals, it's the perfect place for research and study.
+                The Central Library is the hub of information services in the university. It serves as a creative and innovative partner in supporting the teaching, learning, and research activities. With a fast growing collection, both in digital and print format using state-of-the-art facilities, currently the Central Library has more than 169899 books over 4,500 CD-ROMs and subscribes to more than 95 national and international journals/magazines in print besides a larger number of e-journals through INDEST-AICTE Consortium for Subscription of International Journals of IEEE/IEE (IEL Online+ASPP), ASME are available to the academic community all over the campus.
+                Central library is a member of DELNET which connects over 5000 libraries over the country and is a member of National Digital Library as well. The Central Library’s operations and services are fully computerized. For this, we have specialized user-friendly open source software called KOHA. In order to ease the track and circulation of the books/journals we also Bar-Code based computerized circulation system. This software facilitates automated circulation (issue & return) of the resources and speedy access to bibliographies, locations and availability information of the resources stocked in the library. We endeavour to further improve all our efforts to facilitate right information to the right user at the right time.
+            </p>
+			<div class="gallery">
+				<img src="https://i.postimg.cc/wvzXqYwj/libraries-2.jpg" alt="Library 1">
+				<img src="https://i.postimg.cc/9F9QpwWs/libraries-4.jpg" alt="Library 2">
+				<img src="https://i.postimg.cc/50cVjnz0/libraries-6.jpg" alt="Library 3">
+			</div>
+		</section>
+		<section>
+			<h2>laboratories</h2>
+			<p>GLA University has a total of 135 well equipped labs where the students get a hands-on experience on various emerging technologies through which they get an opportunity to expand their practical understanding of how a particular phenomenon works. This practical understanding comes really handy when they use those tools in practical situation, actually, in a corporate or on a project. Every department has its own laboratories where Students work with state-of-the-art machines under expert guidance from experienced and trained Faculty members.</p>
+			<div class="gallery">
+				<img src="https://i.postimg.cc/Rh7mfdsS/laboratries-7.jpg" alt="lab1">
+				<img src="https://i.postimg.cc/VNJc4mGH/laboratries-8.jpg" alt="lab2">
+				<img src="https://i.postimg.cc/MZ7J9s5x/laboratries-2.jpg" alt="lab3">
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 GLA Unversity Academic facility</p>
+	</footer>
+</body>
+</html>
+<style>
+    * {
+	box-sizing: border-box;
+}
+.button {
+  background-color: transparent;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 9px;
+  font-size: medium;
+  transition: all 0.4s ease-in-out;
+}
+
+
+body {
+	margin: 0;
+	font-family: 'Poppins', sans-serif !important;
+    background-image: url('https://i.postimg.cc/sXyNBq7F/images.jpg');
+    background-size: cover;
+}
+
+header {
+    background-image: linear-gradient(to right, #acd88e, #43882a);
+	color: white;
+}
+.logo-container {
+	margin-left: 0.5%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 70px;
+    height: 50px;
+    margin-right: 0.5rem;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-left: 30rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+nav {
+	background-color: #2ab631;
+	overflow: hidden;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+    text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+color: black;
+font-size: 20px;
+font-family: 'Poppins', sans-serif !important;
+}
+
+main {
+margin: 20px;
+}
+
+section {
+margin-bottom: 40px;
+}
+h2 {
+font-size: 36px;
+margin-top: 0;
+}
+
+p {
+font-size: 16px;
+line-height: 1.5;
+font-family: 'Poppins', sans-serif !important;
+}
+
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 20px;
+flex-basis: 30%;
+padding: 1rem;
+margin-bottom: 2rem;
+box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+border-radius: 0.5rem;
+transition: transform 0.3s ease;
+}
+.gallery:hover {
+transform: translateY(-10px);
+}
+
+.gallery img {
+width: calc(33.33% - 10px);
+margin-bottom: 20px;
+border-radius: 5px;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+background-color: #7cba7f;
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+footer p {
+margin: 0;
+font-size: 16px;
+}
+ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #07a01b;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+ul li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+h1 {
+font-size: 36px;
+}
+nav li a {
+	font-size: 16px;
+	padding: 10px;
+}
+
+.gallery img {
+	width: calc(50% - 10px);
+}
+
+}
+</style>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+	<title>Login Page</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+		}
+        nav li {
+    margin-right: 1rem;
+}
+nav a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+}
+        header {
+    background-image: linear-gradient(to right, #acd88e, #43882a);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 55px;
+    height: 50px;
+    margin-right: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+	margin-top: -10px;
+    display: flex;
+    list-style: none;
+    font-size: x-large;
+}
+		body {
+            font-family: 'Raleway';
+			background-image: url('https://i.postimg.cc/sXyNBq7F/images.jpg');
+			background-size: cover;
+		}
+		.login-box {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+            width: 24%;
+            height: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #f2f2f2;
+			padding: 40px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 20px rgba(11, 94, 25, 0.4);
+		}
+		.login-box h2 {
+			text-align: center;
+			margin-bottom: 20px;
+			color: #555;
+		}
+		.user-box {
+			position: relative;
+		}
+		.user-box input {
+			width: 100%;
+			padding: 10px 0;
+			font-size: 16px;
+			color: #555;
+			margin-bottom: 30px;
+			border: none;
+			border-bottom: 1px solid #555;
+			outline: none;
+			background-color: transparent;
+		}
+		.user-box label {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 16px;
+			color: #555;
+			pointer-events: none;
+			transition: all 0.5s ease;
+		}
+		.user-box input:focus ~ label, .user-box input:valid ~ label {
+			top: -20px;
+			left: 0;
+			color: #1e88e5;
+			font-size: 12px;
+		}
+		.login-radio {
+			margin-bottom: 20px;
+            margin-left: 65px;
+		}
+		.login-radio label {
+			margin-right: 10px;
+			font-size: 16px;
+			color: #555;
+		}
+		.login-radio input[type="radio"] {
+			margin-right: 5px;
+		}
+		input[type="submit"] {
+            margin-left: 100px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: all 0.5s ease;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+		ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #07a01b;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+ul li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+	</style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://www.linkpicture.com/q/GLA_University_logo.png" alt="GLA University Logo">
+            <h1 style="font-family: 'Raleway';">GLA University</h1>
+        </div>
+        <nav>
+            <ul style="font-family: 'Raleway'; padding-top: 2.5%;">
+                <li><a href = "{{url_for('home')}}"style="font-family: 'Raleway';">Home</a></li>
+                <li><a href = "{{url_for('aboutus')}}" style="font-family: 'Raleway';">About</a></li>
+                <li><a href = "{{url_for('complain')}}" style="font-family: 'Raleway';">Grievances</a></li>
+                <li><a href = "{{url_for('contactus')}}" style="font-family: 'Raleway';">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+	<div class="login-box">
+		<h2>Login</h2>
+		<form onsubmit="submitForm();return false;">
+			<div class="user-box">
+				<input type="text" name="userid" required="" id="usern">
+				<label>Username</label>
+			</div>
+			<div class="user-box">
+				<input type="password" name="password" required="" id="pass">
+				<label>Password</label>
+			</div>
+			<div class="login-radio">
+				<input type="radio" id="student" name="login-type" value="student" checked>
+				<label for="student">Student</label>
+				<input type="radio" id="dean" name="login-type" value="dean">
+				<label for="dean">Dean</label>
+			</div>
+
+			<input type="submit" name="" value="Submit">
+			
+		</form>
+	</div>
+</body>
+<footer>
+</html>
+
+<script>
+	
+	
+ 
+
+	// create a new XMLHttpRequest object
+	function submitForm()
+	 {
+	  console.log("clicked");
+			  let username = document.getElementById("usern").value;
+			  let password = document.getElementById("pass").value;
+			  let dean = document.getElementById("dean").value;
+			  let student = document.getElementById("student").value;
+
+			  console.log(username);
+			  console.log(password);
+			  console.log(dean)
+			  let xhr = new XMLHttpRequest();
+			  
+			  xhr.open("POST", "/login");
+			  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			  let data = JSON.stringify({ "username": username, "password": password ,"dean":dean,"student":student});
+			  xhr.send(data);
+			  xhr.onreadystatechange = function() {
+				
+
+				if (xhr.readyState === 4) {
+				console.log("going");
+if (xhr.status === 200) {
+console.log(xhr.responseText);
+if(xhr.responseText=="success")
+window.location.href = "/success";
+else if(xhr.responseText=="successdean")
+{
+	window.location.href = "/feedbacks";
+}
+else
+{
+	alert("invalid details");
+} // Redirect to success page
+
+} else {
+console.log("Error:", xhr.statusText);
+}
+}
+else{
+console.log(xhr.readyState)
+}
+
+};
+
+		
+  
+			  
+		  }
+  
+  
+  </script>
+
+

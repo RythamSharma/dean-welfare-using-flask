@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback Form</title>
+	<style>
+		body {
+			background-image: url('https://i.postimg.cc/sXyNBq7F/images.jpg');
+			background-size: cover;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			color: #006600;
+			line-height: 1.5;
+		}
+
+		h1 {
+			color: #006600;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		form {
+			background-color: #FFFFFF;
+			padding: 20px;
+			margin: 20px auto;
+			max-width: 600px;
+			box-shadow: 0px 0px 10px #003300;
+			border-radius: 5px;
+		}
+
+		label {
+			display: block;
+			font-size: 16px;
+			color: #003300;
+			margin-bottom: 5px;
+		}
+
+		.green {
+			color: #006600;
+		}
+
+		select,
+		input[type="text"],
+		textarea {
+			padding: 5px;
+			font-size: 16px;
+			border: 2px solid #006600;
+			border-radius: 5px;
+			width: 100%;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+		}
+
+		.green-select {
+			color: #006600;
+		}
+
+		input[type="submit"] {
+			background-color: #006600;
+			color: #FFFFFF;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+		.alert {
+			padding: 10px;
+			color: #FFFFFF;
+			background-color: #006600;
+			text-align: center;
+			margin-top: 20px;
+			display: none;
+		}
+
+		/* Custom styles for the location and academic block containers */
+		#location-container,
+		#academic-block-container {
+			margin-bottom: 10px;
+		}
+
+		#academic-block-container {
+			margin-top: 10px;
+		}
+
+		#academic-block-container label {
+			margin-top: 0;
+		}
+
+		/* Custom styles for the hostler/day scholar container */
+		#hostler-day-scholar-container {
+			margin-top: 10px;
+		}
+
+		/* Media query for smaller screens */
+		@media only screen and (max-width: 600px) {
+			form {
+				padding: 10px;
+			}
+
+			input[type="submit"] {
+				padding: 5px 10px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Feedback Form</h1>
+	<form id="feedback-form" onsubmit="submitForm();return false;">
+		
+		<div id="name-container">
+			<label for="name">Name</label>
+		<textarea id="name" name="name" rows="1" required></textarea>
+		</div>
+		<div id="course-container">
+			<label for="course">Course</label>
+		<textarea id="course" name="
+		Course" rows="1" required></textarea>
+		</div>
+		<div id="branch-container">
+			<label for="branch">Branch</label>
+		<textarea id="branch" name="Branch" rows="1" required></textarea>
+		</div>
+		<div id="semester-container">
+			<label for="semester">Semester</label>
+			<select id="semester" name="semester" class="green-select">
+				<option value="">Please select</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</div>
+		<div id="hostler-day-schola
+r-container">
+			<label for="hostler-day-scholar">Are you a hostler or day scholar?</label>
+
+<select id="hostler-day-scholar" name="hostler-day-scholar" class="green-select" required>
+			<option value="">Please select</option>
+			<option value="hostler">Hostler</option>
+			<option value="day-scholar">Day Scholar</option>
+		</select>
+	</div>
+	
+	<div id="location-specific-container">
+		<label for="location-specific">Location Specific:</label>
+		<select id="location-specific" name="location-specific" class="green-select" required>
+			<option value="">Please select</option>
+			<option value="hostel">Hostel</option>
+			<option value="academic-block">Academic Block</option>
+		</select>
+	</div>
+
+	<div id="academic-block-container">
+		<label for="academic-block">Academic Block:</label>
+		<select id="academic-block" name="academic-block" class="green-select">
+			<option value="">Please select</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+	</div>
+
+	<label for="category">Category:</label>
+	<select id="category" name="category" class="green-select" required>
+		<option value="">Please select</option>
+		<option value="hostel">Hostel</option>
+		<option value="electrical">Electrical</option>
+		<option value="placement-related">placement related</option>
+		<option value="transport">Transport</option>
+		<option value="fire-safety">Fire and Safety</option>
+		<option value="food-quality">Food quality</option>
+		<option value="staff-behaviour">Staff behaviour</option>
+		<option value="access-point-wifi">access point wifi</option>
+		<option value="Bio-Metric">Bio metric</option>
+		<option value="fortinet">Fortinet</option>
+
+	</select>
+
+	<label for="feedback">Feedback:</label>
+	<textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+	<input type="submit" value="Submit Feedback">
+
+	<div class="alert" id="feedback-alert">Your feedback has been submitted</div>
+</form>
+
+<script>
+
+function submitForm()
+	 {
+	  console.log("clicked");
+			  let stutype = document.getElementById("hostler-day-scholar").value;
+			  let locspec = document.getElementById("location-specific").value;
+			  let ab = document.getElementById("academic-block").value;
+			  let cat = document.getElementById("category").value;
+			  let feed = document.getElementById("feedback").value;
+			  let name = document.getElementById("name").value;
+			  let cou = document.getElementById("course").value;
+			  let bra = document.getElementById("branch").value;
+			  let sem = document.getElementById("semester").value;
+
+			  console.log(stutype);
+			  console.log(locspec);
+			  console.log(ab);
+			  console.log(cat);
+			  console.log(feed);
+			  console.log(name);
+			  console.log(cou);
+			  console.log(bra);
+			  console.log(sem);
+  
+			  let xhr = new XMLHttpRequest();
+			  
+			  xhr.open("POST", "/submission");
+			  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			  let data = JSON.stringify({ "stutype": stutype, "locspec": locspec ,"ab":ab,"cat":cat,"feed":feed, "name":name,"cou":cou,"bra":bra,"sem":sem});
+			  xhr.send(data);
+			  xhr.onreadystatechange = function() {
+ 
+
+				if (xhr.readyState === 4) {
+				console.log("going");
+if (xhr.status === 200) {
+console.log(xhr.responseText);
+ // Redirect to success page
+
+} else {
+console.log("Error:", xhr.statusText);
+}
+}
+else{
+console.log(xhr.readyState)
+}
+
+};
+
+		
+  
+			  
+		  }
+	// Add event listener for feedback form submission
+	document.getElementById("feedback-form").addEventListener("submit", function(event) {
+		// Prevent form submission from reloading the page
+		event.preventDefault();
+
+		// Show feedback alert message
+		document.getElementById("feedback-alert").style.display = "block";
+
+		// Reset the form
+ 		document.getElementById("feedback-form").reset();
+	});
+</script>
+</body>
+</html>

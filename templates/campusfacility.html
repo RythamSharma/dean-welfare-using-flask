@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Campus Facilities</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="logo-container">
+			<img src="https://www.linkpicture.com/q/GLA_University_logo.png" alt="GLA University Logo">
+			<nav style="background-color: transparent;">
+				<ul class="navo" >
+					<li><a class="button" href="{{url_for('home')}}" style="font-size: larger;">Home</a></li> 
+					<li><a class="button" href="{{url_for('aboutus')}}" style="font-size: larger;">About us</a></li>
+					<li><a class="button" href="{{url_for('contactus')}}" style="font-size: larger;">Contact Us</a></li>
+				</ul>
+			  </nav>
+            <h1>Campus Facilities</h1>
+        </div>
+	</header>
+	<main>
+		<section>
+			<h2>Welcome to Our Campus Facilities</h2>
+			<p>Our campus is equipped with state-of-the-art facilities to ensure our students' comfort and convenience. From academic buildings to residence halls, everything is designed to create an ideal environment for learning and personal growth.</p>
+		</section>
+		<section>
+			<h2>Cafeteria</h2>
+			<p>Our cafeteria offers a variety of delicious and healthy meals for our students to enjoy.
+                From sandwiches to salads, our menu has something for everyone
+                For students to grow mentally, physical growth is mandatory. They need proper nourishment which is only possible through Balanced Diet. 
+                Keeping that in mind all the cafeterias have menu that are planned by a group of expert dieticians which provide them healthy and nutritious food. 
+                We understand that students have cravings for snacks every now and then but we ensure that they don’t eat junk. The food provided in cafeteria is hygienic and vegetarian. We have 4 cafeterias in campus that helps the students to fulfil their cravings as and when they want. 
+                The cafeteria offers a good menu of multi-cuisine delights, amidst a lively, jolly atmosphere..</p>
+			<div class="gallery">
+				<img src="https://i.postimg.cc/tTFPZqrx/caf6.jpg" alt="Cafeteria 1">
+				<img src="https://i.postimg.cc/xT6mbFPt/caf24.jpg" alt="Cafeteria 2">
+				<img src="https://i.postimg.cc/C5FZRjB3/caf35.jpg" alt="Cafeteria 3">
+			</div>
+		</section>
+		<section>
+			<h2>Hostels</h2>
+			<p>Thousands of students from all across the country live in the hostels in GLA University, which comes closest to being 'a home away from home'.
+                 GLA University provides well-furnished hostel facility to its outstation candidates. The campus hostels are surrounded by lush green lawns and playing fields. The separate facilities for boys and girls, caring wardens and a tight security ensures a pleasant stay allowing you to focus on your academics.  The hostels have complete power backup. Facilities for indoor games like TT, carom, chess, Television etc. are also available.
+            </p>
+			<div class="gallery">
+				<img src="https://i.postimg.cc/h4LXRRg5/hostel-6.jpg" alt="hostel 1">
+				<img src="https://i.postimg.cc/9f9WPyQn/hostel-5.jpg" alt="hostel 2">
+				<img src="https://i.postimg.cc/85wxLCMY/hostel-3.jpg" alt="hostel 3">
+			</div>
+		</section>
+		<section>
+			<h2>Arogyam</h2>
+			<p>The future of India, of any country for that matter, lies with its youth.
+                 GLA University has taken on the onerous responsibility of imparting comprehensive and high quality education, which is both vocational-based,
+                  as well as professional in nature to the young minds who desire to be part of the booming world economy in general and Indian economy in particular.
+                   Just as the University has evolved from a humble institution (but with high aspirations) to its present size, the Health Care unit – aptly named AAROGYAM too has grown. We now have four qualified and experienced physicians, ably supported by efficient nursing aides.</p>
+			<div class="gallery">
+				<img src="https://i.postimg.cc/fb869Lxr/aarogya-2.jpg" alt="AAROGYAM 1">
+				<img src="https://i.postimg.cc/2Swts6XS/aarogya-1.jpg" alt="AAROGYAM 2">
+				<img src="https://i.postimg.cc/tC9tL50F/aarogya-3.jpg" alt="AAROGYAM 3">
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 GLA Unversity Academic facility</p>
+	</footer>
+</body>
+</html>
+<style>
+    * {
+	box-sizing: border-box;
+}
+.button {
+  background-color: transparent;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 9px;
+  font-size: medium;
+  transition: all 0.4s ease-in-out;
+}
+
+body {
+	margin: 0;
+	font-family: 'Poppins', sans-serif !important;
+    background-image: url('https://i.postimg.cc/sXyNBq7F/images.jpg');
+    background-size: cover;
+}
+
+header {
+    background-image: linear-gradient(to right, #acd88e, #43882a);
+
+	color: white;
+}
+.logo-container {
+    margin-left: 0.5%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 70px;
+    height: 50px;
+    margin-right: 0.5rem;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-left: 44rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+nav {
+	background-color: #2ab631;
+	overflow: hidden;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+    text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+color: black;
+font-size: 20px;
+font-family: 'Poppins', sans-serif !important;
+}
+
+main {
+margin: 20px;
+}
+
+section {
+margin-bottom: 40px;
+}
+h2 {
+font-size: 36px;
+margin-top: 0;
+}
+
+p {
+font-size: 16px;
+line-height: 1.5;
+font-family: 'Poppins', sans-serif !important;
+}
+
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 20px;
+flex-basis: 30%;
+padding: 1rem;
+margin-bottom: 2rem;
+box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+border-radius: 0.5rem;
+transition: transform 0.3s ease;
+}
+.gallery:hover {
+transform: translateY(-10px);
+}
+
+.gallery img {
+width: calc(33.33% - 10px);
+margin-bottom: 20px;
+border-radius: 5px;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+background-color: #7cba7f;
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+footer p {
+margin: 0;
+font-size: 16px;
+}
+ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+ul li a:hover {
+  color: #07a01b;
+  cursor: pointer;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #07a01b;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+ul li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+@media only screen and (max-width: 768px) {
+h1 {
+font-size: 36px;
+}
+nav li a {
+	font-size: 16px;
+	padding: 10px;
+}
+
+.gallery img {
+	width: calc(50% - 10px);
+}
+}
+</style>

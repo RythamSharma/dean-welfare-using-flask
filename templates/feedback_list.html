@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback List</title>
+	<style type="text/css">
+		body {
+			background-color: #F0FFF0;
+			font-family: sans-serif;
+		}
+		h1 {
+			color: #228B22;
+			text-align: center;
+			margin-top: 50px;
+		}
+		table {
+			margin: 0 auto;
+			border-collapse: collapse;
+			width: 80%;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			background-color: #FFFFFF;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+		table th {
+			background-color: #228B22;
+			color: #FFFFFF;
+			padding: 10px;
+			font-weight: bold;
+			text-align: center;
+		}
+		table td {
+			padding: 10px;
+			border-bottom: 1px solid #CCCCCC;
+			text-align: center;
+		}
+		form {
+			margin-top: 50px;
+			margin-bottom: 50px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Feedback List</h1>
+	<form method="get" action="/feedback/search">
+		<label for="category">Category:</label>
+		<select name="category" id="category">
+			<option value="">All</option>
+			<option value="Academics">Academics</option>
+			<option value="Hostel Facilities">Hostel Facilities</option>
+			<option value="Food">Food</option>
+			<option value="food-quality">Food quality</option>
+			<option value="staff-behaviour">Staff behaviour</option>
+			<option value="access-point-wifi">access point wifi</option>
+			<option value="Bio-Metric">Bio metric</option>
+			<option value="fortinet">Fortinet</option>
+			<option value="Others">Others</option>
+		</select>
+		<label for="hostler_day_scholar">Hostler/Day Scholar:</label>
+		<select name="hostler_day_scholar" id="hostler_day_scholar">
+			<option value="">All</option>
+			<option value="hostler">hostler</option>
+			<option value="day-scholar">day-scholar</option>
+		</select>
+		<input type="submit" value="Filter">
+	</form>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>course</th>
+				<th>branch</th>
+				<th>semester</th>
+				<th>Hostler/Day Scholar</th>
+				<th>Location Specific</th>
+				<th>Academic Block</th>
+				<th>Category</th>
+				<th>Feedback</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for feedback in feedbacks %}
+			<tr>
+				<td>{{ feedback.id }}</td>
+				<td>{{ feedback.name }}</td>
+				<td>{{ feedback.course }}</td>
+				<td>{{ feedback.branch }}</td>
+				<td>{{ feedback.semester }}</td>
+				<td>{{ feedback.hostler_day_scholar }}</td>
+				<td>{{ feedback.location_specific }}</td>
+				<td>{{ feedback.academic_block }}</td>
+				<td>{{ feedback.category }}</td>
+				<td>{{ feedback.feedback }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

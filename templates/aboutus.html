@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us | University Name</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+        <div class="logo-container">
+            <img src="https://www.linkpicture.com/q/GLA_University_logo.png" alt="GLA University Logo">
+            <h1 style="font-family: 'Poppins';">GLA University</h1>
+        </div>
+        <nav>
+            <ul style="font-family: 'Poppins'; padding-top: 2%;">
+                <li><a class="button" href = "{{url_for('home')}}">Home</a></li>
+                <li><a class="button" href="{{url_for('aboutus')}}">About</a></li>
+                <li><a class="button" href="{{url_for('complain')}}">Grievances</a></li>
+                <li><a class="button" href = "{{url_for('contactus')}}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+	<main>
+		<section class="hero">
+            <h1 style="font-family:'Poppins'; margin-left: 43.4%;">About</h1>
+            <h1 style="font-family:'Poppins'; margin-right: 44.9%; color: #07a01b; font-weight: 2000px;">GLA</h1>
+            <div class="paras">
+                <p class="paras" style="margin-left: 30%;">I like the dreams of the future better than the history of the past.” - Thomas Jefferson</p>
+                <img src="https://i.postimg.cc/sxXTVdGs/3.png" alt="logo" class="small">
+                <h3>Message</h3>
+                <p>It was the year 1991 Shri Narayan Das Agrawal decided to fulfil the dream of his father, Late Shri Ganeshi Lal Agrawal, of establishing an institute for quality education to the people and the region & beyond. and initiated Sri Jagannath Prasad Ganeshi Lal Bajaj Charitable Trust Samiti in an attempt to make the holy city Mathura a recognized destination for knowledge seekers from different spheres of life. This is what led to the foundation of a milestone at the karmabhoomi of the versatile and sagacious Lord Krishna. GLA has been actively involved with social causes since its very inception and has drawn appreciation from one and all for its works in various facets of societal paradigms.
+
+                    This is what led to the foundation of a milestone at the karmabhoomi of the versatile and sagacious Lord Krishna. GLA has been actively involved with social causes since its very inception and has drawn appreciation from one and all for its work in various facets of societal paradigms.</p>
+                    <img src="https://i.postimg.cc/NG9CFXNc/1.png" alt="logo1" class="small">
+                    <h3>Vision</h3>
+                    <p>We envision ourselves as a pace-setting university of Academic Excellence focused on education, research and development in established and emerging professions.</p>
+                    <img src="https://i.postimg.cc/Gt7SYhn4/2.png" alt="logo2" class="small">
+                    <h3>Mission</h3>
+                    <p>To impart quality professional education, to conduct commendable research and to provide credible consultancy and extension services as per current and emerging socio-economic needs.</p>
+                    <p>To continuously enhance and enrich the teaching/learning process and set such standards, education and otherwise, that other institutes would want to emulate.</p>
+                    <p>To be totally student-centric, thus promoting the overall growth and development of intellect and personality of our prime stakeholders, namely students, so that our alumni are worthy citizens and highly sought-after professionals worldwide.</p>
+                    <p>To empower the members of faculty and staff so that the university's ambience is one of harmony, mutual respect, cooperative endeavour and receptivity towards positive ideas.</p>
+                    <p>To proactively seek regular feedback from all the stakeholders and take appropriate measures based on them thus leading to excellent learning process.be totally student-centric, thus promoting the overall growth and development of intellect and personality of our prime stakeholders, namely students, so that our alumni are worthy citizens and highly sought-after professionals worldwide.</p>
+                    <img src="https://i.postimg.cc/G2pFDPLj/4.png" alt="logo" class="small">
+                    <h3>Quality Policy</h3>
+                    <p>To provide an empowering learning experience in established and emerging professions and capacity-building for leadership, entrepreneurship and innovation.</p>
+            </div>
+		</section>
+        </main>
+        
+        <footer>
+            <p>&copy; GLA University, All Rights Reserved.</p>
+        </footer>
+    </body>
+    </html>
+    <style>
+        body {
+	margin: 0;
+	padding: 0;
+}
+.paras{
+    font-family: 'Quicksand';
+}
+header {
+    background-image: linear-gradient(to right, #acd88e, #43882a);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    height: 46px;
+}
+mall{
+    margin-top: 9px;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 55px;
+    height: 50px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.8rem;
+}
+
+nav ul {
+	list-style-type: none;
+	margin-top: -14px;
+	padding: 0;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+    text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+color: rgb(255, 255, 255);
+font-size: x-large;
+font-family: 'Poppins', sans-serif !important;
+}
+
+
+.hero {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px;
+    
+}
+
+.hero-image {
+	flex: 1;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.hero-image img {
+	width: 100%;
+}
+
+.hero-content {
+	flex: 1;
+	max-width: 600px;
+}
+
+footer {
+background-color: #43882a;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+footer p {
+margin: 0;
+}
+ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Poppins';
+}
+ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  bottom: 4px;
+  left: 0;
+  background-color: #07a01b;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+ul li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+.hero {
+flex-direction: column;
+padding: 20px;
+}
+.hero-image {
+margin-bottom: 20px;
+}
+.hero-content {
+max-width: none;
+}
+}</style>        

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://www.linkpicture.com/q/GLA_University_logo.png" alt="GLA University Logo">
+            <h1 style="font-family: 'Poppins';">GLA University</h1>
+        </div>
+        <nav>
+            <ul style="font-family: 'Raleway'; padding-top: 2.5%;">
+                <li><a href = "{{url_for('home')}}">Home</a></li>
+                <li><a href = "{{url_for('aboutus')}}">About</a></li>
+                <li><a href = "{{url_for('complain')}}">Grievances</a></li>
+                <li><a href = "{{url_for('contactus')}}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+          <div class="text" style="background-color: rgb(31, 113, 31); border-radius: 2%; font-family:'Raleway'; margin: 4%;">
+            <h2 style="color: white; margin-left: 1%;">Campus</h2>
+            <p style="font-size: x-large; margin-left: 2%; color: white;">17km Stone, NH-19, Mathura-Delhi Road
+              P.O. Chaumuhan, Mathura-281 406
+              (U.P.) INDIA</p>
+            <h2 style="color: white; margin-left: 2%;">Admission Helpline</h2>
+            <p style="font-size: large; margin-left: 2%; color: white;">9027068068
+              Agra: 7060141357
+              Aligarh: 7078289548
+              Tel: +91-5662-250900, 250909
+              +91-8171568270
+              Fax: +91-5662-241687.</p>       
+          </div>
+          <div class="map">
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.6077311938566!2d77.59113581499942!3d27.605688682834185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39736ce47bffc039%3A0xfe5fc3da92c6341!2sGLA%20University!5e0!3m2!1sen!2sin!4v1680710785036!5m2!1sen!2sin" width="900" height="610" style="border: 0px;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </main>
+      
+    <footer>
+        <p>&copy; 2023 GLA University - Contact Us</p>    </footer>
+</body>
+</html>
+
+<style>* 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-image: linear-gradient(to right, #acd88e, #43882a);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 55px;
+    height: 50px;
+    margin-right: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: x-large;
+}
+.content{
+    padding-left: 2%;
+    padding-right: 70%;
+    margin-bottom: 10%;
+}
+body{
+    background-image: url('https://i.postimg.cc/sXyNBq7F/images.jpg');
+    background-size: cover;
+}
+nav li {
+    margin-right: 1rem;
+}
+nav a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+}
+h2 {
+font-size: 3rem;
+margin-bottom: 1rem;
+}
+
+p {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+button {
+background-color: #fff;
+color: #333;
+border: none;
+padding: 1rem 2rem;
+border-radius: 0.5rem;
+font-size: 1.5rem;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+button:hover {
+background-color: #333;
+color: #fff;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.text {
+  background-color: rgb(31, 113, 31);
+  border-radius: 2%;
+  font-family: 'Raleway';
+  padding: 2%;
+  width: 100%;
+}
+
+.map {
+  width: 50%;
+}
+
+footer {
+background-color: #7cba7f;
+color: #fff;
+padding: 1rem;
+text-align: center;
+margin-top: 2rem;
+}
+
+footer p {
+font-size: 1rem;
+}
+
+</style>
